@@ -1,0 +1,79 @@
+#msg {
+	padding: 0.5em 0.5em 0.5em 30px;
+	margin: 0.5em 2em;
+	font-weight: bold;
+	border: 1px dotted #6c8ec0;
+}
+
+#msg h2 {
+	font-weight: bold;
+        font-size: 1em;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	border: none;
+}
+
+#msg p {
+	font-weight: normal;
+	margin: 0.2em 0;
+	padding: 0.6em 2px 2px 0px;
+}
+
+
+#msg.errors {
+	border: 1px dashed red;
+	background: url('https://www.eionet.europa.eu/styles/eionet2007/admonitions/warning_ea.gif') 3px 3px no-repeat;
+}
+
+#msg.success {
+	color: #315076;
+	background: url('https://www.eionet.europa.eu/styles/eionet2007/admonitions/tip_ea.gif') 3px 3px no-repeat;
+
+}
+
+.sidebar-content {
+	padding: 0.5em 0.5em 0.5em 30px;
+	margin: 0.5em 2em;
+	font-weight: bold;
+	border: 1px dashed black;
+}
+
+#list-languages {
+	display: none;
+}
+
+div.row {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+label.f1-label {
+        width: 8em;
+	font-weight: bold;
+	display: inline-block;
+}
+
+#fm1 {
+	width: 30em;
+	margin: 0px auto;
+}
+
+#fm1 h2 {
+	font-weight: bold;
+        font-size: 1em;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	border: none;
+}
+
+#fm1 .row {
+        padding: .5em 0;
+}
+
+.forgotpwd {
+	width: 30em;
+	margin: 0px auto;
+}
+

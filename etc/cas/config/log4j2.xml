@@ -95,10 +95,11 @@
         <AsyncLogger name="org.jasig.spring" level="warn" />
 
         <!-- Log perf stats only to perfStats.log -->
+        <!--
         <AsyncLogger name="perfStatsLogger" level="info" additivity="false" includeLocation="true">
             <AppenderRef ref="casPerf"/>
         </AsyncLogger>
-
+        -->
         <!-- Log audit to all root appenders, and also to audit log (additivity is not false) -->
         <AsyncLogger name="org.apereo.inspektr.audit.support" level="info" includeLocation="true" >
             <AppenderRef ref="casAudit"/>

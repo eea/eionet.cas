@@ -23,12 +23,12 @@
 
 #msg.errors {
 	border: 1px dashed red;
-	background: url('https://www.eionet.europa.eu/styles/eionet2007/admonitions/warning_ea.gif') 3px 3px no-repeat;
+	background: url('images/admonitions/warning_ea.gif') 3px 3px no-repeat;
 }
 
 #msg.success {
 	color: #315076;
-	background: url('https://www.eionet.europa.eu/styles/eionet2007/admonitions/tip_ea.gif') 3px 3px no-repeat;
+	background: url('images/admonitions/tip_ea.gif') 3px 3px no-repeat;
 
 }
 

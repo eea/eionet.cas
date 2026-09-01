@@ -9,7 +9,7 @@ The build is done using the Maven Overlay Method, so you only see the
 files that have been modified here. The rest is downloaded as dependencies
 with Maven.
 
-To upgrade, change the cas.version number in the pom.xml and rebuild with
+To upgrade the CAS version, change the cas.version number in the pom.xml and rebuild with
 
   mvn clean install
 
@@ -17,27 +17,26 @@ Resources:
 
 -  https://apereo.github.io/cas/5.1.x/installation/Maven-Overlay-Installation.html
 
-CAS enforces connection via SSL as people are entering passwords into the login page. It does redirection and SSL directly in the Tomcat application and it must use a dedicated IP number.
+CAS enforces connection via SSL as people are entering passwords into
+the login page. It does redirection and SSL directly in the Tomcat
+application and it must use a dedicated IP number.
 
 # Configuration
 
-The `etc` directory contains the configuration files and directories that need to be copied to `/etc/cas/config`.
-
-# Deployment
-
-The Eionet CAS service is deployed behind an Apache server, which handles the TLS and connects to Tomcat via AJP on port 8009.
-
-- Create a keystore file `thekeystore` under `/etc/cas`. Use the password `changeit` for both the keystore and the key/certificate entries.
-- Ensure the keystore is loaded up with keys and certificates of the server.
-
-On a successful deployment via the following methods, CAS will be available at:
-
-* `http://cas.server.name:8080/cas`
-* `https://cas.server.name:8443/cas`
+The `etc` directory contains the configuration files and directories
+that need to be copied to `/etc/cas/config`. This is included in the Dockerfile.
 
 # Docker configuration
 
-After having built the WAR file with maven, it can be directly used in docker containers thanks to the environmental configuration. The Dockerfile can be used to build a ready-to-deploy image of the Eionet CAS service:
+After having built the WAR file with maven, it can be directly used in
+docker containers thanks to the environmental configuration. The Dockerfile
+can be used to build a ready-to-deploy image of the Eionet CAS service:
 
     $ docker build -t eeacms/casserver:latest .
+
+To push a new version to Docker hub, you update the version in the pom.xml file,
+build a new image, and then push it up:
+    $ VERSION=$(xpath -q -e "/project/version/text()" pom.xml)
+    $ docker eeacms/casserver:latest
+    $ docker push eeacms/casserver:latest eeacms/casserver:$(VERSION)
 

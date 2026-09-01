@@ -1,0 +1,7 @@
+cas:
+  server:
+    name: https://cas.example.org:8443
+    prefix: https://cas.example.org:8443/cas
+  adminPagesSecurity:
+    ip: 127\.0\.0\.1
+

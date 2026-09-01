@@ -1,2 +1,10 @@
 info:
   description: CAS Configuration
+
+logging:
+  config: file:/etc/cas/config/log4j2.xml
+
+# serviceRegistry:
+#   config:
+#     location: classpath:/services
+

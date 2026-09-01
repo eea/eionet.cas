@@ -40,3 +40,4 @@ On a successful deployment via the following methods, CAS will be available at:
 After having built the WAR file with maven, it can be directly used in docker containers thanks to the environmental configuration. The Dockerfile can be used to build a ready-to-deploy image of the Eionet CAS service:
 
     $ docker build -t eeacms/casserver:latest .
+
